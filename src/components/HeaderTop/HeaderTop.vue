@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
 export default {
     props: {
         title: String
@@ -20,7 +21,7 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus">
 @import "../../common/stylus/mixins.styl"
     .header
-        background-color #02a774
+        background-color #007ACC
         position fixed
         z-index 100
         left 0
