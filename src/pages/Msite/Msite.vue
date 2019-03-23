@@ -60,26 +60,24 @@ export default {
     },
     mounted () {
         this.$store.dispatch('getCategorys')
-        new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            loop: true
-        })
+        this.$store.dispatch('getShops')
     },
     computed: {
         ...mapState(['address','categorys']),
 
-        categorysArr(){
+        categorysArr(){ //整理成二维数组
           const max = 8
           const arr = []
           const {categorys} = this
           let smallArr = []
           categorys.forEach(c =>{
+            //如果smallArr是空的，将小数组保存到大数组中
             if(smallArr.length === 0){
               arr.push(smallArr)
             }
+            //将当前分类保存到小数组中
             smallArr.push(c)
+            //如果smallArr是满的，创建一个新的
             if(smallArr.length === max)
               smallArr = []
           })
@@ -87,8 +85,9 @@ export default {
         }
     },
     watch: {
-      categorys(value) {
-        this.$nextTick(()=>{
+      categorys(value) { //categorys数组中有数据，在异步更新界面之前执行
+        //界面更新就立即创建Swiper对象
+        this.$nextTick(()=>{ //一旦完成界面更新，立即调用(此条语句写在更新界面之后)
           new Swiper('.swiper-container',{
             pagination: {
               el:'.swiper-pagination',

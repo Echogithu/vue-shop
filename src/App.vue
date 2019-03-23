@@ -11,7 +11,7 @@ import FooterGuide from './components/FooterGuide/FooterGuide'
 
 export default {
   mounted() {
-    // this.$store.dispatch('getAddress')
+    this.$store.dispatch('getAddress')
     this.getAddress()
   },
   components: {

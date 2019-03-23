@@ -14,6 +14,7 @@ module.exports = {
     proxyTable: {
       '/api': {
         target: 'http://localhost:4000',
+        // target: 'http://mock-api.com/JVKy96Kw.mock',
         changeOrigin: true,//支持跨域
         pathRewrite: { //重写路由，去掉路径开头的'/api'
           '^/api': ''

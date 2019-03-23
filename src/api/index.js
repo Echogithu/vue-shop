@@ -2,7 +2,9 @@
 与后台交互模块
 */
 import ajax from './ajax'
-
+// const BASE_URL = 'http://localhost:4000'
+// const BASE_URL = 'http://mock-api.com/JVKy96Kw.mock'
+// const BASE_URL = '/api'
 /**
  * 获取地址信息
 */
@@ -12,6 +14,7 @@ export const reqAddress = geohash => ajax('/api/position/' + geohash)
  * 获 取 msite页 面 食 品 分 类 列 表
 */ 
 export const reqCategorys = () => ajax('/api/index_category')
+// export const reqCategorys = () => ajax('http://mock-api.com/JVKy96Kw.mock/api/index_category')
 
 /** 
 * 获 取 msite商 铺 列 表 ( 根 据 经 纬 度 )
