@@ -1,6 +1,18 @@
 # gshop
 
-> A Vue.js project
+> 本项目是基于vue2实战项目，vue2 +vue-router2 + es6 +webpack 外卖app。
+
+## 技术架构
+* vue-cli
+* vue
+* vue-resource
+* vue-router
+* vue-infinite-scroll
+* stylus
+* webpack
+
+##展示
+
 
 ## Build Setup
 
