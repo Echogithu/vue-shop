@@ -12,7 +12,7 @@
 * webpack
 
 ## 展示
-https://github.com/Echogithu/vue-shop/blob/master/static/img/%E9%A6%96%E9%A1%B5.png
+![](https://github.com/Echogithu/vue-shop/blob/master/static/img/%E9%A6%96%E9%A1%B5.png)
 
 ## Build Setup
 
