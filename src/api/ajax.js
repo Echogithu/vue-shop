@@ -18,9 +18,32 @@ export default function ajax (url ='', data = {}, type = 'GET') {
     }
 
     promise.then(response => {
+      console.log(response.data)
       resolve(response.data)
     }).catch(error => {
       reject(error)
     })
   })
 }
+// export default function ajax(url, data = {}, type = 'get') {
+//   return new Promise((resolve, reject) => {
+//     const options = {
+//       url,
+//       type
+//     }
+//     if (type.toLowerCase() === 'get') {
+//       options.params = data   
+//     } else {
+//       options.data = data
+//     }
+//     axios(options)
+//       .then(res => {
+//         console.log('返回数据', res.data)
+//         resolve(res.data)
+//       })
+//       .catch(error => {
+//         reject()
+//         console.error(error)
+//       })
+//   })
+// }

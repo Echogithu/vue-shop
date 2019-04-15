@@ -24,7 +24,7 @@ export const reqShops = ({latitude, longitude}) => ajax('/api/shops', {latitude,
 /** 
 * 账 号 密 码 登 录 
 */ 
-export const reqPwdLogin = (name, pwd, captcha) => ajax('/api/login_pwd', { name, pwd, captcha }, 'POST')
+export const reqPwdLogin = ({name, pwd, captcha}) => ajax('/api/login_pwd', { name, pwd, captcha }, 'POST')
 
 /** 
  * 获 取 短 信 验 证 码 
@@ -40,9 +40,24 @@ export const reqSmsLogin = (phone, code) => ajax('/api/login_sms', {phone, code}
 /** 
 * 获 取 用 户 信 息 ( 根 据 会 话 ) 
 */ 
-export const reqUser = () => ajax('/api/userinfo')
+export const reqUserInfo = () => ajax('/api/userinfo')
 
 /**
  * 请求登出
  */
 export const reqLogout = () => ajax('/api/logout')
+
+/**
+ * 获取商家信息
+ */
+export const reqShopInfo = () => ajax('/info')
+
+/**
+ * 获取商家评价
+ */
+export const reqShopRatings = () => ajax('/ratings')
+
+/**
+ * 获取商家商品
+ */
+export const reqShopGoods = () => ajax('/goods')
